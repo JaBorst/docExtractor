@@ -1,7 +1,7 @@
 from functools import partial
 import torch
 
-from utils import coerce_to_path_and_check_exist
+from ..utils import coerce_to_path_and_check_exist
 
 from .res_unet import ResUNet
 from .tools import safe_model_state_dict

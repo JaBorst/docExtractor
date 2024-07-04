@@ -5,12 +5,12 @@ from PIL import Image, ImageDraw
 import numpy as np
 import torch
 
-from models import load_model_from_path
-from utils import coerce_to_path_and_check_exist, coerce_to_path_and_create_dir, get_files_from_dir
-from utils.constant import BACKGROUND_LABEL, ILLUSTRATION_LABEL, TEXT_LABEL, LABEL_TO_COLOR_MAPPING, MODEL_FILE
-from utils.image import Pdf2Image, resize
-from utils.logger import get_logger, print_info, print_error
-from utils.path import MODELS_PATH
+from .models import load_model_from_path
+from .utils import coerce_to_path_and_check_exist, coerce_to_path_and_create_dir, get_files_from_dir
+from .utils.constant import BACKGROUND_LABEL, ILLUSTRATION_LABEL, TEXT_LABEL, LABEL_TO_COLOR_MAPPING, MODEL_FILE
+from .utils.image import Pdf2Image, resize
+from .utils.logger import get_logger, print_info, print_error
+from .utils.path import MODELS_PATH
 
 VALID_EXTENSIONS = ['jpeg', 'JPEG', 'jpg', 'JPG', 'pdf', 'tiff']
 

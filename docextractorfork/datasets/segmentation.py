@@ -8,11 +8,11 @@ import torch
 from torch.utils.data.dataset import Dataset as TorchDataset
 from skimage.morphology import skeletonize
 
-from utils import coerce_to_path_and_check_exist, get_files_from_dir
-from utils.constant import (BACKGROUND_LABEL, BASELINE_COLOR, CONTEXT_BACKGROUND_COLOR, CONTEXT_BACKGROUND_LABEL,
+from ..utils import coerce_to_path_and_check_exist, get_files_from_dir
+from ..utils.constant import (BACKGROUND_LABEL, BASELINE_COLOR, CONTEXT_BACKGROUND_COLOR, CONTEXT_BACKGROUND_LABEL,
                             LABEL_TO_COLOR_MAPPING, SEG_GROUND_TRUTH_FMT, TEXT_BORDER_COLOR)
-from utils.image import resize
-from utils.path import DATASETS_PATH
+from ..utils.image import resize
+from ..utils.path import DATASETS_PATH
 
 INPUT_EXTENSIONS = ['jpeg', 'jpg', 'JPG']
 LABEL_EXTENSION = 'png'

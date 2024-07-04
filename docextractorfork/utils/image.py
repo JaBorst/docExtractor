@@ -4,12 +4,12 @@ from pdf2image import convert_from_path
 
 import numpy as np
 
-from utils import coerce_to_path_and_check_exist, coerce_to_path_and_create_dir, get_files_from_dir
-from utils.constant import (LABEL_TO_COLOR_MAPPING, COLOR_TO_LABEL_MAPPING)
-from utils.logger import print_info
+from . import coerce_to_path_and_check_exist, coerce_to_path_and_create_dir, get_files_from_dir
+from .constant import (LABEL_TO_COLOR_MAPPING, COLOR_TO_LABEL_MAPPING)
+from .logger import print_info
 
 
-def resize(img, size, keep_aspect_ratio=True, resample=Image.ANTIALIAS):
+def resize(img, size, keep_aspect_ratio=True, resample=Image.LANCZOS):
     if isinstance(size, (int, float)):
         assert keep_aspect_ratio
         ratio = float(np.sqrt(size / (img.size[0] * img.size[1])))

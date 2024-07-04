@@ -4,7 +4,7 @@ from torch import nn
 
 from .resnet import get_resnet_model
 from .tools import conv1x1, conv3x3, DecoderModule, get_norm_layer, UpsampleCatConv
-from utils.logger import print_info, print_warning
+from ..utils.logger import print_info, print_warning
 
 INPUT_CHANNELS = 3
 FINAL_LAYER_CHANNELS = 32
